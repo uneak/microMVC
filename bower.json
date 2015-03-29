@@ -1,0 +1,26 @@
+{
+  "name": "micro-mvc",
+  "version": "0.0.0",
+  "authors": [
+    "Marc Galoyer <mgaloyer@uneak.fr>"
+  ],
+  "description": "Minimalist Javascript MVC Framework",
+  "main": "dist/js/micromvc.js",
+  "keywords": [
+    "javascript",
+    "framework",
+    "MVC",
+    "micro",
+    "nano",
+    "minimalist"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.uneak.fr",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

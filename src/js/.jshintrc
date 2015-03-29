@@ -1,0 +1,28 @@
+{
+  "boss": true,
+  "curly": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "expr": true,
+  "immed": true,
+  "noarg": true,
+  "quotmark": "double",
+  "undef": true,
+  "unused": false,
+
+  "sub": true,
+
+  "globals": {
+    "window": true,
+    "document": true,
+    "location": true,
+    "setTimeout": true,
+    "clearTimeout": true,
+    "setInterval": true,
+    "clearInterval": true,
+
+    "define": true,
+    "module": true,
+    "noGlobal": true
+  }
+}

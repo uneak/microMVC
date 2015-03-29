@@ -1,0 +1,40 @@
+{
+  "name": "micro-mvc",
+  "title": "microMVC Framework",
+  "version": "0.0.0",
+  "description": "Minimalist Javascript MVC Framework",
+  "main": "dist/js/micromvc.js",
+  "homepage": "http://www.uneak.fr",
+  "author": "Marc Galoyer <mgaloyer@uneak.fr>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uneak/microMVC.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uneak/microMVC/issues"
+  },
+  "keywords": [
+    "javascript",
+    "framework",
+    "MVC",
+    "micro",
+    "nano",
+    "minimalist"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "^0.11.1",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-npm2bower-sync": "^0.8.1"
+  },
+  "scripts": {
+    "build": "npm install && grunt",
+    "start": "grunt"
+  },
+  "preferGlobal": false,
+  "private": false,
+  "license": "MIT"
+}
