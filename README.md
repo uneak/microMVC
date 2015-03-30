@@ -20,16 +20,19 @@ $ bower install micro-mvc
 ## Getting Started
 
 >load library:
+
 ```html
 <script type="text/javascript" src="microMVC/dist/js/micromvc.min.js"></script> 
 ```
 
 >Create application:
+
 ```javascript
 var app = new microMVC.Application();
 ```
 
 >Add a controller:
+
 ```javascript
 app.controllers.add("appctrl", {
     
@@ -37,6 +40,7 @@ app.controllers.add("appctrl", {
 ```
 
 >Add a model:
+
 ```javascript
 app.models.add("appmodel", {
 
@@ -44,6 +48,7 @@ app.models.add("appmodel", {
 ```
 
 >Add a view:
+
 ```javascript
 app.views.add("appview", {
 
