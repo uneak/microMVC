@@ -4,6 +4,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify')
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-jshint')
+    grunt.loadNpmTasks('grunt-contrib-requirejs')
     grunt.loadNpmTasks('grunt-npm2bower-sync')
 
 
@@ -79,6 +80,16 @@ module.exports = function(grunt) {
                         'keywords',
                         'license'
                     ]
+                }
+            }
+        },
+        requirejs: {
+            compile: {
+                options: {
+                    baseUrl: "src/js",
+                    //mainConfigFile: "path/to/config.js",
+                    name: "src/js/micromvc", // assumes a production build using almond
+                    out: "dist/js/micromvc.js"
                 }
             }
         }
