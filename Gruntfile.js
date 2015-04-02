@@ -52,7 +52,8 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: 'src/js/*.js',
-                tasks: ['concat:dist']
+                //tasks: ['concat:dist']
+                tasks: ['requirejs:dev']
             }
         },
         jshint: {
@@ -84,12 +85,22 @@ module.exports = function(grunt) {
             }
         },
         requirejs: {
-            compile: {
+            dist: {
                 options: {
                     baseUrl: "src/js",
                     //mainConfigFile: "path/to/config.js",
-                    name: "src/js/micromvc", // assumes a production build using almond
-                    out: "dist/js/micromvc.js"
+                    name: "micromvc",
+                    out: "dist/js/micromvc.min.js",
+                    optimize: "uglify2"
+                }
+            },
+            dev: {
+                options: {
+                    baseUrl: "src/js",
+                    //mainConfigFile: "path/to/config.js",
+                    name: "micromvc",
+                    out: "dist/js/micromvc.js",
+                    optimize: "none"
                 }
             }
         }
@@ -99,8 +110,9 @@ module.exports = function(grunt) {
 
 
 
-    grunt.registerTask('dev', ['concat:dist'])
-    grunt.registerTask('dist', ['sync', 'dev', 'uglify:dist'])
+    //grunt.registerTask('dev', ['concat:dist'])
+    grunt.registerTask('dev', ['requirejs:dev'])
+    grunt.registerTask('dist', ['sync', 'requirejs:dist']) //, 'uglify:dist'
 
     grunt.registerTask('default', ['dev', 'watch'])
 }
