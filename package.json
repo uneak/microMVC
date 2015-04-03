@@ -1,7 +1,7 @@
 {
   "name": "micro-mvc",
   "title": "microMVC Framework",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Minimalist Javascript MVC Framework",
   "main": "dist/js/micromvc.js",
   "homepage": "http://www.uneak.fr",
@@ -28,7 +28,9 @@
     "grunt-contrib-jshint": "^0.11.1",
     "grunt-contrib-uglify": "^0.8.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-npm2bower-sync": "^0.8.1"
+    "grunt-npm2bower-sync": "^0.8.1",
+    "requirejs": "~2.1.16",
+    "grunt-contrib-requirejs": "~0.4.4"
   },
   "scripts": {
     "build": "npm install && grunt",

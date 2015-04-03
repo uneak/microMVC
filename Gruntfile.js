@@ -4,6 +4,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify')
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-jshint')
+    grunt.loadNpmTasks('grunt-contrib-requirejs')
     grunt.loadNpmTasks('grunt-npm2bower-sync')
 
 
@@ -51,7 +52,8 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: 'src/js/*.js',
-                tasks: ['concat:dist']
+                //tasks: ['concat:dist']
+                tasks: ['requirejs:dev']
             }
         },
         jshint: {
@@ -81,6 +83,26 @@ module.exports = function(grunt) {
                     ]
                 }
             }
+        },
+        requirejs: {
+            dist: {
+                options: {
+                    baseUrl: "src/js",
+                    //mainConfigFile: "path/to/config.js",
+                    name: "micromvc",
+                    out: "dist/js/micromvc.min.js",
+                    optimize: "uglify2"
+                }
+            },
+            dev: {
+                options: {
+                    baseUrl: "src/js",
+                    //mainConfigFile: "path/to/config.js",
+                    name: "micromvc",
+                    out: "dist/js/micromvc.js",
+                    optimize: "none"
+                }
+            }
         }
 
 
@@ -88,8 +110,9 @@ module.exports = function(grunt) {
 
 
 
-    grunt.registerTask('dev', ['concat:dist'])
-    grunt.registerTask('dist', ['sync', 'dev', 'uglify:dist'])
+    //grunt.registerTask('dev', ['concat:dist'])
+    grunt.registerTask('dev', ['requirejs:dev'])
+    grunt.registerTask('dist', ['sync', 'requirejs:dist']) //, 'uglify:dist'
 
     grunt.registerTask('default', ['dev', 'watch'])
 }
