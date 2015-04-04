@@ -1,7 +1,7 @@
 {
   "name": "micro-mvc",
   "title": "microMVC Framework",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Minimalist Javascript MVC Framework",
   "main": "dist/js/micromvc.js",
   "homepage": "http://www.uneak.fr",
