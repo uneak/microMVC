@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <title>Unit Test</title>
+
+    <link rel="stylesheet" type="text/css" href="../bower_components/jasmine-core/lib/jasmine-core/jasmine.css"></link>
+    <script type="text/javascript" src="../bower_components/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+    <script type="text/javascript" src="../bower_components/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+
+    <script type="text/javascript" src="../bower_components/requirejs/require.js"></script>
+    <!--
+        Use RequireJS to load and execute the actual Jasmine test
+        specifications (ie. specs).
+
+        NOTE: We have to use the domReady! plugin since the Jasmine
+        reporter needs to have access to the BODY tag of the document
+        when outputting the results of the test.
+    -->
+    <script type="text/javascript">
+        require(['config'], function(){
+            require(['spec/micromvc'], function(){
+
+                // Set up the HTML reporter - this is reponsible for
+                // aggregating the results reported by Jasmine as the
+                // tests and suites are executed.
+                jasmine.getEnv().addReporter(
+                        new jasmine.HtmlReporter()
+                );
+
+                // Run all the loaded test specs.
+                jasmine.getEnv().execute();
+
+            });
+        });
+    </script>
+
+
+
+</head>
+<body>
+<!-- Left intentionally blank. -->
+</body>
+</html>

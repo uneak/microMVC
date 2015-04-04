@@ -6,5 +6,7 @@ define(["component"], function(Component) {
         this.views = new Component(this);
     };
 
+    Application.prototype.VERSION = "0.0.1";
+
     return Application;
 });

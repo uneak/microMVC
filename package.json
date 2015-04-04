@@ -17,6 +17,8 @@
     "javascript",
     "framework",
     "MVC",
+    "requirejs",
+    "AMD",
     "micro",
     "nano",
     "minimalist"
@@ -30,7 +32,9 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-npm2bower-sync": "^0.8.1",
     "requirejs": "~2.1.16",
-    "grunt-contrib-requirejs": "~0.4.4"
+    "grunt-contrib-requirejs": "~0.4.4",
+    "grunt-template-jasmine-requirejs": "~0.2.2",
+    "grunt-contrib-jasmine": "~0.8.2"
   },
   "scripts": {
     "build": "npm install && grunt",
